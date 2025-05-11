@@ -19,4 +19,4 @@ var global = New()
 func SetGlobal(d Dice) { global = d }
 
 // SetGlobalFunc registers Dice with given random generator
-func SetGlobalFunc(rng func(int) int) { SetGlobal(Dice{Rng: rng}) }
+func SetGlobalFunc(rng func(int) int) { SetGlobal(NewFunc(rng)) }
